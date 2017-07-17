@@ -1,0 +1,19 @@
+<core:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" controllerName="view.TaskCreation" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="New Task" showNavButton="true" navButtonPress="onBackClicked">
+		<content>
+		
+		    <Label text="Task name"/>
+		    <Input id="taskNameInput"/>
+		
+		</content>
+		<footer>
+		    <Toolbar>
+    		    <ToolbarSpacer/>
+                <Button text="Save" press="onSaveClicked" icon="sap-icon://save"/>
+            </Toolbar>
+		</footer>
+	</Page>
+</core:View>
