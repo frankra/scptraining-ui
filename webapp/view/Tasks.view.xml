@@ -1,0 +1,20 @@
+<core:View xmlns:core="sap.ui.core" 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns="sap.m" controllerName="controller.Tasks" 
+xmlns:html="http://www.w3.org/1999/xhtml">
+  <Page title="SAP Task Tracker">
+    <content>
+      <List id="tasksList" mode="Delete" delete="onDeleteClick" items="{Tasks>/taskList}">
+        <CustomListItem press="onTaskClicked" type="Active">
+          <CheckBox text="{Tasks>name}" selected="{Tasks>done}" enabled="false"/>
+        </CustomListItem>
+      </List>
+    </content>
+    <footer>
+      <Toolbar>
+        <ToolbarSpacer/>
+        <Button text="New task" press="onNewTaskClicked" icon="sap-icon://add"/>
+      </Toolbar>
+    </footer>
+  </Page>
+</core:View>

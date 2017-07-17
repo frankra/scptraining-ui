@@ -1,5 +1,5 @@
 {
-  "welcomeFile": "index.html",
+  "welcomeFile": "/webapp/index.html",
   "routes": [
     {
       "path": "/resources",
@@ -20,12 +20,24 @@
       "description": "SAPUI5 Test Resources"
     },
     {
-        "path": "/hcptraining",
-        "target": {
-                "type": "destination",
-                "name": "hcptraining"
-        },
-        "description": "Back End URL"
+      "path": "/scptraining",
+      "target": {
+        "type": "destination",
+        "name": "scptraining"
+      },
+      "description": "Back End URL"
+    }
+  ],
+  "sendWelcomeFileRedirect": true,
+  "cacheControl": [
+    {
+      "directive": "private",
+      "maxAge": 0,
+      "path": "**.html"
+    },
+    {
+      "directive": "public",
+      "maxAge": 31536000
     }
   ]
 }
