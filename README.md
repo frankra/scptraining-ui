@@ -9,7 +9,7 @@
 ## Steps - 1. HTML5 Application
 1. Access [your SCP cockpit](https://account.hanatrial.ondemand.com/cockpit)
 2. Navigate to Applications -> HTML5 Applications
-3. Create hit the New Application button and set the name as `scptrainingui` (without the hyphen sign)
+3. Hit the New Application button and set the name as `scptrainingui` (without the hyphen sign)
 4. Click on the newly created application to open the Application Overview
 5. Click the Versioning menu item and copy the Git Repository URL. We will used it on the next steps
 
