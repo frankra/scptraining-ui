@@ -10,6 +10,8 @@ sap.ui.define([
     onInit: function () {
       var that = this;
 
+      this.getView().setBusyIndicatorDelay(0);//Remove busy indicator delay
+
       this.oTasksModel.setData({
         taskList: []
       });

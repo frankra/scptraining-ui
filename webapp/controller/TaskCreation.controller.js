@@ -6,6 +6,10 @@ sap.ui.define([
   return Controller.extend("controller.TaskCreation", {
     sDestinationURL: "scptraining",
 
+    onInit: function(){
+      this.getView().setBusyIndicatorDelay(0);//Remove busy indicator delay
+    },
+
     onSaveClicked: function () {
       var sInputValue = this.getView().byId("taskNameInput").getValue();
       var oTask = {
