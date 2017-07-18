@@ -5,8 +5,8 @@ xmlns:html="http://www.w3.org/1999/xhtml">
   <Page title="SAP Task Tracker">
     <content>
       <List id="tasksList" mode="Delete" delete="onDeleteClick" items="{Tasks>/taskList}">
-        <CustomListItem press="onTaskClicked" type="Active">
-          <CheckBox text="{Tasks>name}" selected="{Tasks>done}" enabled="false"/>
+        <CustomListItem>
+          <CheckBox text="{Tasks>name}" select="onTaskSelect" selected="{Tasks>done}"/>
         </CustomListItem>
       </List>
     </content>

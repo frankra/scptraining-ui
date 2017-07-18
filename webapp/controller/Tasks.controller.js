@@ -51,15 +51,13 @@ sap.ui.define([
       console.log("Error!!!");
     },
 
-    onTaskClicked: function (oEvent) {
+    onTaskSelect: function (oEvent) {
       this.getView().setBusy(true);
 
       var that = this;
-      var sPath = oEvent.getSource().getBindingContextPath();
-      var oSelectTask = this.oTasksModel.getProperty(sPath);
-      oSelectTask.done = !oSelectTask.done;
+      var oSelectTask = oEvent.getSource().getBindingContext("Tasks").getObject();
 
-      jQuery.ajax(this.sDestinationURL + "/" + oSelectTask.id, {
+      jQuery.ajax(this.sDestinationURL + "/task/" + oSelectTask.id, {
         dataType: "json",
         data: JSON.stringify(oSelectTask),
         method: "PUT",
